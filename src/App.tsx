@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, useWindowDimensions } from 'react-native';
 import {SceneMap, TabView} from 'react-native-tab-view';
-import Header from "./components/header";
 import GiveItem from "./components/GiveItem";
 import Search from "./components/Search";
+import HeaderPC from "./pages/Layouts/PC/header";
+import HeaderSP from "./pages/Layouts/SP/header";
 
 const FirstRoute = () => (
   <View style={{ flex: 1, backgroundColor: '#ff4081' }} />
@@ -30,10 +31,13 @@ const App: React.FC = () => {
     { key: '2', title: '事務局' },
     { key: '3', title: '管理部' },
   ]);
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width > 1024; // Xác định màn hình PC hoặc smartphone dựa trên độ rộng
 
   return (
     <View style={styles.container}>
-      <Header />
+      {isLargeScreen ? <HeaderPC /> : <HeaderSP />}
+
       <Search />
 
       <View>
