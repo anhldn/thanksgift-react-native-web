@@ -13,21 +13,21 @@ const GiveItem: React.FC = () => (
       <View style={styles.avatarGive}>
         <Image
           style={styles.avatarUser}
-          source={require('../../assets/Images/Ellipse 41.png')}
+          source={require('../../../assets/Images/Ellipse 41.png')}
         />
         <View>
           <Image
             style={styles.avatarCoin}
-            source={require('../../assets/Images/coin.png')}
+            source={require('../../../assets/Images/coin.png')}
           />
           <Image
             style={styles.avatarHand}
-            source={require('../../assets/Images/hand.png')}
+            source={require('../../../assets/Images/hand.png')}
           />
         </View>
         <Image
           style={styles.avatarUser}
-          source={require('../../assets/Images/Ellipse 41.png')}
+          source={require('../../../assets/Images/Ellipse 41.png')}
         />
       </View>
     </View>
