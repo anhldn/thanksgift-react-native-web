@@ -2,7 +2,7 @@ import HeaderSP from "../Layouts/SP/header";
 import HeaderPC from "../Layouts/PC/header";
 import Search from "./Search";
 import {StyleSheet, useWindowDimensions, View} from "react-native";
-import {SceneMap, TabView} from "react-native-tab-view";
+import {SceneMap, TabBar, TabView} from "react-native-tab-view";
 import GiveItem from "./GiveItem";
 import React from "react";
 
@@ -24,6 +24,20 @@ const renderScene = SceneMap({
   3: ThirdRoute,
 });
 
+const renderTabBar = (props: any) => (
+  <TabBar
+    {...props}
+    indicatorStyle={{ backgroundColor: 'blue' }}
+    style={{
+      backgroundColor: 'white',
+      borderBottomWidth: 1,
+      borderBottomColor: '#bdbdbd',
+    }}
+    activeColor="blue"
+    inactiveColor="gray"
+  />
+);
+
 const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
@@ -44,10 +58,11 @@ const Home = () => {
           navigationState={{ index, routes }}
           renderScene={renderScene}
           onIndexChange={setIndex}
+          renderTabBar={renderTabBar}
+
         />
       </View>
 
-      <GiveItem />
       <GiveItem />
 
     </View>

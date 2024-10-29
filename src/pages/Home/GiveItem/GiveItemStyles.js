@@ -10,7 +10,7 @@ export default StyleSheet.create({
         color: '#828282',
         fontSize: 14,
         fontWeight: 400,
-        marginVertical: 5,
+        marginVertical: 15,
     },
     sectionInfoGive: {
         flexDirection: 'row',
@@ -62,6 +62,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
+        marginVertical: 15,
     },
     sectionInfo: {
         backgroundColor: '#F2F4FF',
