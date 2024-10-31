@@ -1,9 +1,17 @@
 import React from 'react';
-import Home from "./pages/Home";
+import {useWindowDimensions, View} from "react-native";
+import HomePC from "./pages/PC/Home";
+import HomeSP from "./pages/SP/Home";
 
 const App: React.FC = () => {
+
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width > 1024; // Xác định màn hình PC hoặc smartphone dựa trên độ rộng
+
   return (
-    <Home />
+    <View>
+      {isLargeScreen ? <HomePC /> : <HomeSP />}
+    </View>
   );
 };
 

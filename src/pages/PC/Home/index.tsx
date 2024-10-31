@@ -1,10 +1,9 @@
-import HeaderSP from "../Layouts/SP/header";
-import HeaderPC from "../Layouts/PC/header";
-import Search from "./Search";
-import {StyleSheet, useWindowDimensions, View} from "react-native";
+import {View, StyleSheet} from "react-native";
 import {SceneMap, TabBar, TabView} from "react-native-tab-view";
-import GiveItem from "./GiveItem";
 import React from "react";
+import SearchPC from "./Search";
+import GiveItemPC from "./GiveItem";
+import HeaderPC from "../Layouts/header";
 
 const FirstRoute = () => (
   <View style={{ flex: 1, backgroundColor: '#ff4081' }} />
@@ -38,32 +37,30 @@ const renderTabBar = (props: any) => (
   />
 );
 
-const Home = () => {
+const HomePC = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: '1', title: 'すべて' },
     { key: '2', title: '事務局' },
     { key: '3', title: '管理部' },
   ]);
-  const { width } = useWindowDimensions();
-  const isLargeScreen = width > 1024; // Xác định màn hình PC hoặc smartphone dựa trên độ rộng
+
   return (
     <View style={styles.container}>
-      {isLargeScreen ? <HeaderPC /> : <HeaderSP />}
+      <HeaderPC />
 
-      <Search />
+      <SearchPC />
 
-      <View>
+      <View style={{ width: '30%' }}>
         <TabView
           navigationState={{ index, routes }}
           renderScene={renderScene}
           onIndexChange={setIndex}
           renderTabBar={renderTabBar}
-
         />
       </View>
 
-      <GiveItem />
+      <GiveItemPC />
 
     </View>
   );
@@ -92,4 +89,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default HomePC;

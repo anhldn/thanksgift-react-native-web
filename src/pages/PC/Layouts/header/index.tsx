@@ -12,15 +12,31 @@ const HeaderPC = () => {
       />
 
       <View style={styles.pcItem}>
+        <Image
+          style={{ width: 20, height: 20, marginRight: 10 }}
+          source={require('../../../../assets/Images/coinLogo.png')}
+        />
         <Text>コイン</Text>
       </View>
       <View style={styles.pcItem}>
+        <Image
+          style={{ width: 20, height: 20, marginRight: 10 }}
+          source={require('../../../../assets/Images/coinLogo.png')}
+        />
         <Text>ニュース</Text>
       </View>
       <View style={styles.pcItem}>
+        <Image
+          style={{ width: 20, height: 20, marginRight: 10 }}
+          source={require('../../../../assets/Images/coinLogo.png')}
+        />
         <Text>ランキング</Text>
       </View>
       <View style={styles.pcItem}>
+        <Image
+          style={{ width: 20, height: 20, marginRight: 10 }}
+          source={require('../../../../assets/Images/coinLogo.png')}
+        />
         <Text>その他</Text>
       </View>
       <Text style={styles.pcPoints}>保有ポイント：1,000 pt</Text>

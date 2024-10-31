@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image, Text, View, FlatList } from "react-native";
 import styles from './GiveItemStyles';
-import coinHistoryMock from '../../../mocks/coinHistoryMock';
+import coinHistoryMock from '../../../../mocks/coinHistoryMock';
 
-const GiveItem: React.FC = () => (
+const GiveItemSP: React.FC = () => (
 
 
   <FlatList
@@ -25,11 +25,11 @@ const GiveItem: React.FC = () => (
               <View>
                 <Image
                   style={styles.avatarCoin}
-                  source={require('../../../assets/Images/coin.png')}
+                  source={require('../../../../assets/Images/coin.png')}
                 />
                 <Image
                   style={styles.avatarHand}
-                  source={require('../../../assets/Images/hand.png')}
+                  source={require('../../../../assets/Images/hand.png')}
                 />
               </View>
               <Image
@@ -57,4 +57,4 @@ const GiveItem: React.FC = () => (
   />
 );
 
-export default GiveItem;
+export default GiveItemSP;
