@@ -2,21 +2,20 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     app: {
-        flex: 3, // the number of columns you want to devide the screen into
+        flex: 3,
+        paddingHorizontal: 65,
         backgroundColor: 'rgb(242, 244, 255)',
-    },
-    container: {
-        width: '85%',
-        margin: 'auto',
+        paddingTop: 25,
     },
     mainItem: {
-        borderRadius: '8px',
+        flex: 1,
+        maxWidth: "33.33%",
+        borderRadius: 20,
         backgroundColor: 'white',
-        width: '30%',
-        height: 310,
-        marginVertical: 20,
-        marginRight: 30,
+        height: 350,
         padding: 15,
+        borderWidth: 10,
+        borderColor: "rgb(242, 244, 255)",
     },
     arrow: {
         width: 25,
@@ -24,6 +23,7 @@ export default StyleSheet.create({
     },
     sectionInfo: {
         flexDirection: 'row',
+        alignItems: 'center',
     },
     title: {
         fontWeight: '700',
@@ -55,6 +55,24 @@ export default StyleSheet.create({
         color: '#828282',
         fontSize: 14,
         fontWeight: 400,
-        marginVertical: 15,
+        height: 70,
+        marginTop: 15,
+        marginBottom: 10,
     },
+    sectionHeart: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        marginLeft: 10,
+        alignItems: 'center',
+    },
+    actionComment: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    sectionIcon: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    }
 });

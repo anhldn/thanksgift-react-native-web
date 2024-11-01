@@ -5,23 +5,28 @@ export default StyleSheet.create({
         width: 200,
         height: 60,
     },
+    titleMenu: {
+        fontWeight: '700',
+        color: 'rgba(15, 16, 60, 1)',
+    },
     avatarLogoSP: {
         width: 30,
         height: 30,
         marginRight: 10,
     },
-    pcContainer: {
+    pcSection: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-around',
-        padding: 10,
-        shadowColor: '#0A114D', // Màu bóng (màu chính)
+        justifyContent: 'space-between',
+        paddingVertical: 10,
+        paddingHorizontal: 75,
+        shadowColor: '#0A114D',
         shadowOffset: {
-            width: 0,  // Độ dịch chuyển theo chiều ngang
-            height: 3, // Độ dịch chuyển theo chiều dọc
+            width: 0,
+            height: 3,
         },
-        shadowOpacity: 0.1, // Độ mờ của bóng (0.1 tương ứng với #0A114D1A)
-        shadowRadius: 5,    // Bán kính của bóng
+        shadowOpacity: 0.1,
+        shadowRadius: 5,
     },
     pcItem: {
         flexDirection: 'row',

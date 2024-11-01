@@ -6,7 +6,7 @@ export default StyleSheet.create({
         justifyContent: 'space-between',
         height: 80,
         alignItems: 'center',
-        paddingHorizontal: 45,
+        paddingHorizontal: 72,
     },
     yourMoney: {
         flexDirection: 'row',
@@ -47,12 +47,13 @@ export default StyleSheet.create({
     input: {
         flex: 1,
         fontSize: 16,
-        color: '#333',
+        height: 35,
     },
     searchContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#F8F8F8',
+        borderColor: 'rgba(221, 221, 221, 1)',
+        borderWidth: 1,
         borderRadius: 8,
         flex: 1,
         paddingHorizontal: 10,
